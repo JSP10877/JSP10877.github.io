@@ -1,0 +1,248 @@
+* {
+    margin: 0; /* Eliminamos margenes por defecto del navegador*/
+    padding: 10; /*Agregamos un relleno de 10 unidades para que los elementos tenga un espacio de 1o pixeles*/ 
+    box-sizing: border-box; /*Esto asegura que el tamaño de un elemento incluya el relleno y el borde dentro de las dimensiones definidas*/
+}
+
+
+body {
+    font-family: 'Inknut Antiqua', serif; /* Aplicamos la fuente Inknut Antiqua */
+    /* line-height: 1.6; */
+    background-color: #FEFAE0;
+}
+.banner1 { /* Aquí acomodamos los parametros del banner superior*/
+    background-color: #5F6F52; 
+    margin-bottom: -40px;
+    text-align: right; /* Esto alinea el texto a la derecha */
+}
+
+header {
+    display: flex; /*modelo de caja flexible (flexbox) para el elemento header. Esto permite alinear y distribuir los elementos hijos (por ejemplo, el logo y el menú de navegación) de manera más controlada y adaptable.*/
+    justify-content: space-between; /*Distribuye los elementos hijos dentro del header de tal forma que haya espacio entre ellos. El primer hijo (como el logo) se alineará a la izquierda, y el último hijo (como el menú de navegación) a la derecha, dejando el espacio sobrante entre ambos.*/
+    align-items: center; /* Con esto nos aseguramos de que las letras queden centradas, ni muy alto, ni muy bajo*/
+    background-color: #D6B392;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 130px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+    background-color: #20b358;
+}
+
+.whatsapp-btn i {
+    font-size: 30px;
+}
+header .logo img { /*En esta parte es super importante el "img" ya que especificamos que el estilo se aplica a la imagen*/
+    width: 100px;
+    margin-left: 10px;
+}
+
+nav ul { /*al agregar el "nav" especificamos que el "ul" dentro de este elemento se modifique mediante este css*/
+    list-style: none; /*Eliminamos el diseño por defecto de una lista*/
+    display: flex; /*Convierte el contenedor <ul> en un contenedor flexible (flex container), lo que permite su diseño vertical*/
+    gap: 50px; /*Espacios entre las opciones del menú*/
+}
+
+nav ul li a { /*CSS para modificar los parametros esteticos de las secciones del menú*/
+    text-decoration: none;
+    color: #4b5940;
+    font-size: 18px;
+}
+
+nav ul li a.active { /* Rayita debajo de la seccion en la que se encuentra actualmente el usuario (active)*/
+    border-bottom: 2px solid #4b5940; /* Color y grosor de la línea */
+    padding-bottom: 5px; /* Espaciado entre el texto y la línea */
+}
+
+nav ul li a:hover{
+    color: #e5f3db; /* me interesan estos colores:#f2ffe7,   */ 
+}
+
+
+/*______________________________________________-En esta parte hacia abajo comienza lo mio-___________________*/
+
+
+.vistap {
+    position: relative;
+    text-align: center;
+}
+
+.vistap img {
+    width: 100%;
+    height: 550px;   
+    object-fit: cover;
+}
+
+.vistap .vistap_text h1 {
+    margin: 0; /* Elimina márgenes innecesarios */
+    white-space: nowrap; /* Evita el salto de línea en el texto */
+    font-size: 6vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ajusta el texto para estar en el centro tanto vertical como horizontalmente */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra del texto */
+    text-align: center; /* Alinea el texto al centro del contenedor */
+}
+
+
+.diferenciador {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fefae0;
+}
+
+.diferenciador h2 {
+    font-size: 3vw;
+    margin-bottom: 40px;
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    display: inline-block;
+}
+
+.diferenciador h2::after {
+    content: ''; /* Crea un elemento vacío después del <h2> */
+    display: block; /* Hace que el pseudo-elemento sea un bloque, lo que le permite ocupar toda la línea horizontal */
+    width: 90%; /* Define el ancho de la línea, en este caso 400px */
+    height: 3px; /* Establece la altura de la línea, lo que la convierte en una línea delgada de 3px */
+    background-color: #3d3d3d; /* Asigna un color gris oscuro a la línea */
+    margin: 10px auto 0; /* Añade un margen superior de 10px, luego centra la línea horizontalmente con `auto` y no añade margen en la parte inferior */
+}
+
+
+
+.mejoras {
+    display: flex; /* Activa Flexbox para los elementos hijos del contenedor */
+    justify-content: space-around; /* Distribuye los elementos con espacio alrededor de ellos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si no caben en una sola */
+}
+
+.mejora { /* parametro general para la clase mejora*/
+    width: 250px;
+    text-align: center;
+}
+
+
+.diferenciador h2, 
+.diferenciador .mejora h3, 
+.diferenciador .mejora p { /*Cambio de color de forma mas rapida para el texto de esta seccion*/
+    color: #4B5940;
+    
+}
+
+
+.mejora img {
+    width: 200px;
+    margin-bottom: 20px;
+    border-radius: 50%; /* Hacer las imágenes circulares */
+    padding: 20px; /* Agregar espacio alrededor de la imagen */
+    background-color: #d2d3b9; /* Fondo suave para las imágenes */
+    border: 2px solid #4B5940; /* Borde para la imagen */
+}
+
+.mejora h3 { /*Parametros de los titulos de cada "diferencia"*/
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+
+/*_____________Pie de pagina______________*/
+
+
+
+footer {
+    background-color: #5F6F52; /* Color de fondo basado en la imagen */
+    padding: 1rem 40px; /* Cambiado a rem para mejor ajuste */
+    display: flex;
+    justify-content: space-between; /* Alinear logo a la izquierda y los íconos a la derecha */
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+}
+
+footer .footer-logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Cinzel', serif; /* Fuente estilizada similar */
+    font-size: 36px; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+}
+
+footer .footer-logo::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 70px;
+    background-color: white;
+    margin-left: 20px; /* Espacio entre texto y la línea */
+}
+
+footer .footer-icons {
+    display: flex;
+    gap: 20px; /* Espacio entre íconos */
+}
+
+footer .footer-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%; /* Hacer que los íconos tengan forma de círculo */
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer .footer-icons a:hover {
+    background-color: white;
+    color: #5F6F52; /* Cambiar color al fondo verde al pasar el ratón */
+}
+
+/* Media queries para pantallas pequeñas */
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambia el menú a vertical */
+        gap: 2vw;
+    }
+    
+    nav ul li a {
+        font-size: 3vw; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+
+    .vistap .vistap_text h1 {
+        font-size: 8vw; /* Ajusta el texto principal */
+    }
+
+    .diferenciador h2 {
+        font-size: 7vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+    }
+    
+    .diferenciador h2::after {
+        width: 70%; /* Aumenta el ancho de la línea en dispositivos pequeños */
+    }
+
+
+    footer .footer-logo {
+        font-size: 1.5rem; /* Ajusta el tamaño del logo en el pie de página */
+    }
+}

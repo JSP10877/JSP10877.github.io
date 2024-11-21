@@ -1,0 +1,225 @@
+/* MEDIDAS DE LOS BLOQUES DE PRODUCTOS*/
+.container {
+   max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*____________________________--Partes del menú-____________*/
+* {
+    margin: 0; /* Eliminamos margenes por defecto del navegador*/
+    padding: 10; /*Agregamos un relleno de 10 unidades para que los elementos tenga un espacio de 1o pixeles*/ 
+    box-sizing: border-box; /*Esto asegura que el tamaño de un elemento incluya el relleno y el borde dentro de las dimensiones definidas*/
+    }
+
+
+    body {
+    font-family: 'Inknut Antiqua', serif; /* Aplicamos la fuente Inknut Antiqua */
+    /* line-height: 1.6; */
+    background-color: #FEFAE0;
+    }
+
+    .banner1 { /* Aquí acomodamos los parametros del banner superior*/
+    background-color: #5F6F52; 
+    margin-bottom: -40px;
+    text-align: right; /* Esto alinea el texto a la derecha */
+    }
+
+    header {
+    display: flex; /*modelo de caja flexible (flexbox) para el elemento header. Esto permite alinear y distribuir los elementos hijos (por ejemplo, el logo y el menú de navegación) de manera más controlada y adaptable.*/
+    justify-content: space-between; /*Distribuye los elementos hijos dentro del header de tal forma que haya espacio entre ellos. El primer hijo (como el logo) se alineará a la izquierda, y el último hijo (como el menú de navegación) a la derecha, dejando el espacio sobrante entre ambos.*/
+    align-items: center; /* Con esto nos aseguramos de que las letras queden centradas, ni muy alto, ni muy bajo*/
+    background-color: #D6B392;
+    }
+
+    header .logo img { /*En esta parte es super importante el "img" ya que especificamos que el estilo se aplica a la imagen*/
+    width: 100px;
+    margin-left: 10px;
+    }
+
+    nav ul { /*al agregar el "nav" especificamos que el "ul" dentro de este elemento se modifique mediante este css*/
+    list-style: none; /*Eliminamos el diseño por defecto de una lista*/
+    display: flex; /*Convierte el contenedor <ul> en un contenedor flexible (flex container), lo que permite su diseño vertical*/
+    gap: 50px; /*Espacios entre las opciones del menú*/
+    }
+
+    nav ul li a { /*CSS para modificar los parametros esteticos de las secciones del menú*/
+    text-decoration: none;
+    color: #4b5940;
+    font-size: 18px;
+    }
+
+    nav ul li a.active { /* Rayita debajo de la seccion en la que se encuentra actualmente el usuario (active)*/
+    border-bottom: 2px solid #4b5940; /* Color y grosor de la línea */
+    padding-bottom: 5px; /* Espaciado entre el texto y la línea */
+    }
+
+    nav ul li a:hover{
+        color: #e5f3db; /* me interesan estos colores:#f2ffe7,   */ 
+    }
+
+    /*------------PARTE PROPIA DE SU PAGINA-----------*/
+
+h1 {
+    text-align: center;
+    color: #5d6d4f;
+}
+.product-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.category-button:hover{
+    background-color: #5F6F52;
+}
+
+.category-button {
+    background-color: #bd9776;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.product {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.product-image {
+    width: 150px;
+    height: 150px;
+    background-color: #d1c6b0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.product-image-img{
+    width: 150px;
+    height: 150px;
+    background-color: #d1c6b0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.product-info {
+    flex-grow: 1;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 130px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+    background-color: #20b358;
+}
+
+.whatsapp-btn i {
+    font-size: 30px;
+}
+/*Nuestro footer*/
+
+footer {
+    background-color: #5F6F52; /* Color de fondo basado en la imagen */
+    padding: 1rem 40px; /* Cambiado a rem para mejor ajuste */
+    display: flex;
+    justify-content: space-between; /* Alinear logo a la izquierda y los íconos a la derecha */
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+}
+
+footer .footer-logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Cinzel', serif; /* Fuente estilizada similar */
+    font-size: 36px; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+}
+
+footer .footer-logo::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 70px;
+    background-color: white;
+    margin-left: 20px; /* Espacio entre texto y la línea */
+}
+
+footer .footer-icons {
+    display: flex;
+    gap: 20px; /* Espacio entre íconos */
+}
+
+footer .footer-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%; /* Hacer que los íconos tengan forma de círculo */
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer .footer-icons a:hover {
+    background-color: white;
+    color: #5F6F52; /* Cambiar color al fondo verde al pasar el ratón */
+}
+
+/* Media queries para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambia el menú a vertical */
+        gap: 2vw;
+    }
+    
+    nav ul li a {
+        font-size: 3vw; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+
+    /* Ajusta el layout de productos para pantallas pequeñas */
+    .products {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .product {
+        flex-direction: column; /* Asegúrate de que los elementos dentro del producto estén en una sola columna */
+        align-items: flex-start; /* Alinea los elementos a la izquierda para un mejor ajuste visual */
+    }
+
+    .product-image {
+        margin-bottom: 10px; /* Añade margen debajo de la imagen */
+        margin-right: 0; /* Quita el margen derecho para alinear la imagen al contenido */
+    }
+}
+
